@@ -1,7 +1,14 @@
 <?php
 session_start();
 
-$stat = $_SESSION['status'];
+if ($_SESSION['status']) {
+        ?>
+        <script>
+                window.location.replace("user");
+        </script>
+        <?php
+}
+
 ?>
 
 <!doctype html>
