@@ -1,0 +1,31 @@
+@font-face {
+    font-family: iransans;
+    src: url("../font/iransans/iransans.ttf");
+}
+.app {
+    font-family: iransans;
+    direction: rtl;
+    text-align: right;
+}
+.app .welcome {
+    background: #555;
+    height: 100vh;
+    padding: 10%;
+    color: white;
+    text-shadow: 2px 7px 5px black, 
+    0px -4px 10px black;
+    text-align: center;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.welink {
+    color: white;
+    text-decoration: none;
+}
+.welink:hover {
+    color: gray;
+}
