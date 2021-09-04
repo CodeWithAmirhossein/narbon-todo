@@ -9,6 +9,8 @@ if ($_SESSION['status']) {
         <?php
 }
 
+include("auth/core.php");
+
 ?>
 
 <!doctype html>
