@@ -16,6 +16,13 @@
     0px -4px 10px black;
     text-align: center;
 }
+.app .form {
+    padding: 10%;
+}
+.formdialog {
+    padding: 5%;
+    border: solid 1px black;
+}
 .left {
     float: left;
 }
