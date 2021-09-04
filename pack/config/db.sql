@@ -1,3 +1,7 @@
+/*
+    Database name: narbontodo
+*/
+
 --
 -- Table structure for table `people`
 --
@@ -12,3 +16,9 @@ CREATE TABLE `people`
     `password`  text DEFAULT NULL,
     PRIMARY KEY (`row`)
 );
+
+--
+-- Sample user
+--
+
+INSERT INTO `people` (`id`, `name`, `email`, `password`) VALUES ('123456', 'امیرحسین محمدی', 'amirhosseinmohammadi1380@yahoo.com', 'amir2003');
