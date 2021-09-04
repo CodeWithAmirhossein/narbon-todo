@@ -14,7 +14,7 @@ if ($_SESSION['status']) {
 <!doctype html>
 <html lang="en">
 <head>
-        <title>Narbon TODO Application</title>
+        <title>اپلیکیشن مدریت تسک های ناربن</title>
 
         <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
 
@@ -40,18 +40,18 @@ if ($_SESSION['status']) {
                                 <br>
                                 <hr>
                                 <p>
-                                        <span class="left">
+                                        <span class="right">
                                                 <a href="auth" class="welink">
                                                         <i class="fa fa-sign-in"></i>
                                                         ورود به حساب کاربری
                                                 </a>
                                         </span>
-                                        <span class="right">
+                                        <!-- <span class="left">
                                                 <a href="auth" class="welink">
                                                         <i class="fa fa-plus"></i>
                                                         ساخت حساب کاربری جدید
                                                 </a>
-                                        </span>
+                                        </span> -->
                                 </p>
                         </div>
                 </div>
