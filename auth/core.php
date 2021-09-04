@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include("pack/config/config.php");
 
 $errors = array();
@@ -17,7 +19,10 @@ if (isset($_POST['login'])) {
 
     if (count($errors) == 0) {
         $login_query = "SELECT * FROM `people` WHERE `email` = '$email' AND `password` = '$password'";
-        if (mysqli_query($connection, $login_query)) {
+        if ($result = mysqli_query($connection, $login_query)) {
+            $user = mysqli_fetch_assoc($result);
+            $_SESSION['status'] = true;
+            $_SESSION['id'] = $user['id'];
             ?>
                 <script>
                     window.location.replace("user");
