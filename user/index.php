@@ -42,6 +42,14 @@ $user = mysqli_fetch_assoc($get_result);
                                         <b><?php echo $user['name']; ?></b>
                                 </p>
                                 <hr>
+                                <div class="row">
+                                        <div class="col-md-4">
+                                                <div class="dialog">
+                                                        <h3>اضافه کردن تسک جدید</h3>
+                                                </div>
+                                                <br>
+                                        </div>
+                                </div>
                         </div>
                 </div>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
