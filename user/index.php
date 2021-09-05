@@ -54,9 +54,9 @@ $user = mysqli_fetch_assoc($get_result);
                                 <hr>
                                 <div class="row">
                                         <div class="col-md-12">
-                                                <table class="table table-bordered border border-dark">
+                                                <table class="table">
                                                         <thead>
-                                                                <tr>
+                                                                <tr class="tblhd">
                                                                         <th scope="col">کد</td>
                                                                         <th scope="col">نام</td>
                                                                         <th scope="col">تاریخ ثبت</td>
@@ -65,7 +65,7 @@ $user = mysqli_fetch_assoc($get_result);
                                                                 </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr>
+                                                                <tr class="tblrow">
                                                                         <td>کد</td>
                                                                         <td>نام</td>
                                                                         <td>تاریخ ثبت</td>
