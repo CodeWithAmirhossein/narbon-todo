@@ -26,7 +26,7 @@ if (isset($_POST["addtask"])) {
     }
 
     if (count($errors) == 0) {
-        $datetime = date();
+        $datetime = date("M d, Y H:i:s");
         $taskid = rand(111111, 999999);
         
         $add = "INSERT INTO `tasks` (`taskid`, `userid`, `name`, `date`, `status`) VALUES ('$taskid', `$id`, `$task`, `$datetime`, `pending`)";
