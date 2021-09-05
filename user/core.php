@@ -12,9 +12,12 @@ $errors = array();
 
 $id = $_SESSION['id'];
 
-$get_user = "SELECT * FROM `people` WHERE `id` = '$id'";
-$get_result = mysqli_query($connection, $get_user);
-$user = mysqli_fetch_assoc($get_result);
+$get_user_query = "SELECT * FROM `people` WHERE `id` = '$id'";
+$get_user_result = mysqli_query($connection, $get_user_query);
+$user = mysqli_fetch_assoc($get_user_result);
+
+$get_tasks_query = "SELECT * FROM `tasks` WHERE `userid` = '$id'";
+$get_tasks_result = mysqli_query($connection, $get_tasks_query);
 
 date_default_timezone_set('Iran');
 
