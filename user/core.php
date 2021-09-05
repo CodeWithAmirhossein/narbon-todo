@@ -29,6 +29,23 @@ if (isset($_POST["addtask"])) {
         $datetime = date("M d, Y H:i:s");
         $taskid = rand(111111, 999999);
         
-        $add = "INSERT INTO `tasks` (`taskid`, `userid`, `name`, `date`, `status`) VALUES ('$taskid', `$id`, `$task`, `$datetime`, `pending`)";
+        $add = "INSERT INTO `tasks` (`taskid`, `userid`, `name`, `date`, `status`) VALUES ('$taskid', '$id', '$task', '$datetime', 'pending')";
+
+        if (mysqli_query($connection, $add)) {
+            ?>
+                <script>
+                    window.alert("تسک اضافه شد.");
+                    window.location.replace(".");
+                </script>
+            <?php
+        }
+        else {
+            ?>
+                <script>
+                    window.alert("<?php echo mysqli_error($connection   ); ?>");
+                    window.location.replace(".");
+                </script>
+            <?php
+        }
     }
 }
