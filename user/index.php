@@ -53,6 +53,28 @@ $user = mysqli_fetch_assoc($get_result);
                                 <br>
                                 <hr>
                                 <div class="row">
+                                        <div class="col-md-12">
+                                                <table class="table table-bordered border border-dark">
+                                                        <thead>
+                                                                <tr>
+                                                                        <th scope="col">کد</td>
+                                                                        <th scope="col">نام</td>
+                                                                        <th scope="col">تاریخ ثبت</td>
+                                                                        <th scope="col">وضعیت</td>
+                                                                        <th scope="col">تغییر وضعیت</td>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                <tr>
+                                                                        <td>کد</td>
+                                                                        <td>نام</td>
+                                                                        <td>تاریخ ثبت</td>
+                                                                        <td>وضعیت</td>
+                                                                        <td>تغییر وضعیت</td>
+                                                                </tr>
+                                                        </tbody>
+                                                </table>
+                                        </div>
                                 </div>
                         </div>
                 </div>
