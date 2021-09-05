@@ -38,6 +38,18 @@
 .right {
     float: right;
 }
+.addnew {
+    color: green;
+    cursor: pointer;
+}
+.logout {
+    text-decoration: none;
+    color: red;
+}
+.logout:hover {
+    text-decoration: none;
+    color: red;
+}
 .welink {
     color: white;
     text-decoration: none;
