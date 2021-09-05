@@ -16,6 +16,8 @@ $get_user = "SELECT * FROM `people` WHERE `id` = '$id'";
 $get_result = mysqli_query($connection, $get_user);
 $user = mysqli_fetch_assoc($get_result);
 
+date_default_timezone_set('Iran');
+
 if (isset($_POST["addtask"])) {
     $task = mysqli_real_escape_string($connection, $_POST['task']);
 
