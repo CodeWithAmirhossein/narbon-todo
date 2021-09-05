@@ -43,27 +43,16 @@ $user = mysqli_fetch_assoc($get_result);
                                                 <b><?php echo $user['name']; ?></b>
                                         </span>
                                         <span class="left">
-                                                <i class="fa fa-plus"></i>
-                                                <i class="fa fa-sign-out"></i>
+                                                <i data-bs-toggle="modal" data-bs-target="#addnew" class="fa fa-plus addnew"></i>
+
+                                                <a href="../auth/logout.php" class="logout">
+                                                        <i class="fa fa-sign-out"></i>
+                                                </a>
                                         </span>
                                 </p>
                                 <br>
                                 <hr>
                                 <div class="row">
-                                        <div class="col-md-4">
-                                                <div class="dialog">
-                                                        <p class="title">اضافه کردن تسک جدید</p>
-                                                        <hr>
-                                                        <form>
-                                                                <label class="form-label" for="task">نام تسک</label>
-                                                                <input type="text" name="task" id="task" class="form-control" placeholder="نام تسک">
-                                                                <br>
-                                                                <br>
-                                                                <button class="btn btn-dark">اضافه کردن</button>
-                                                        </form>
-                                                </div>
-                                                <br>
-                                        </div>
                                 </div>
                         </div>
                 </div>
@@ -72,3 +61,23 @@ $user = mysqli_fetch_assoc($get_result);
                         crossorigin="anonymous"></script>
         </body>
 </html>
+
+<form method="post" action="index.php">
+    <div class="modal fade form" id="addnew" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">اضافه کردن تسک جدید</h5>
+                </div>
+                <div class="modal-body center">
+                        <label class="form-label" for="task">نام تسک</label>
+                        <input type="text" name="task" id="task" class="form-control" placeholder="نام تسک">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">خروج</button>
+                    <button class="btn btn-sm btn-dark">اضافه کردن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
