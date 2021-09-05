@@ -45,7 +45,15 @@ $user = mysqli_fetch_assoc($get_result);
                                 <div class="row">
                                         <div class="col-md-4">
                                                 <div class="dialog">
-                                                        <h3>اضافه کردن تسک جدید</h3>
+                                                        <p class="title">اضافه کردن تسک جدید</p>
+                                                        <hr>
+                                                        <form>
+                                                                <label class="form-label" for="task">نام تسک</label>
+                                                                <input type="text" name="task" id="task" class="form-control" placeholder="نام تسک">
+                                                                <br>
+                                                                <br>
+                                                                <button class="btn btn-dark">اضافه کردن</button>
+                                                        </form>
                                                 </div>
                                                 <br>
                                         </div>
