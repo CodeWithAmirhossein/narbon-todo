@@ -38,9 +38,16 @@ $user = mysqli_fetch_assoc($get_result);
                 <div class="app">
                         <div class="user">
                                 <p>
-                                        خوش آمدید 
-                                        <b><?php echo $user['name']; ?></b>
+                                        <span class="right">
+                                                خوش آمدید 
+                                                <b><?php echo $user['name']; ?></b>
+                                        </span>
+                                        <span class="left">
+                                                <i class="fa fa-plus"></i>
+                                                <i class="fa fa-sign-out"></i>
+                                        </span>
                                 </p>
+                                <br>
                                 <hr>
                                 <div class="row">
                                         <div class="col-md-4">
