@@ -19,6 +19,14 @@
     0px -4px 10px black;
     text-align: center;
 }
+.dialog {
+    padding: 5%;
+    border: solid 1px black;
+}
+.dialog .title {
+    font-weight: bold;
+    font-size: 15px;
+}
 .form {
     font-family: iransans;
     direction: rtl;
