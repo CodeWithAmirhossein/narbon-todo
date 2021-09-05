@@ -52,13 +52,34 @@ include("core.php");
                                                                 </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr class="tblrow">
-                                                                        <td>کد</td>
-                                                                        <td>نام</td>
-                                                                        <td>تاریخ ثبت</td>
-                                                                        <td>وضعیت</td>
-                                                                        <td>تغییر وضعیت</td>
-                                                                </tr>
+                                                                <?php
+                                                                if (mysqli_num_rows($get_tasks_result) < 0) {
+                                                                        echo "در حال حاضر شما تسکی را ثبت نکرده اید";
+                                                                }
+                                                                else {
+                                                                        while ($task_row = mysqli_fetch_assoc($get_tasks_result)) {
+                                                                                ?>
+                                                                                <tr class="tblrow">
+                                                                                        <td><?php echo $task_row["taskid"]; ?></td>
+                                                                                        <td><?php echo $task_row["name"]; ?></td>
+                                                                                        <td><?php echo $task_row["date"]; ?></td>
+                                                                                        <td>
+                                                                                                <?php
+                                                                                                        if ($task_row["status"] == "pending") {
+                                                                                                                echo "<i class='fa fa-clock-o'></i>";
+                                                                                                        }
+                                                                                                ?>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                                <i class="fa fa-check"></i>
+                                                                                                <i class="fa fa-times"></i>
+                                                                                                <i class="fa fa-trash"></i>
+                                                                                        </td>
+                                                                                </tr>
+                                                                                <?php
+                                                                        }
+                                                                }
+                                                                ?>
                                                         </tbody>
                                                 </table>
                                         </div>
