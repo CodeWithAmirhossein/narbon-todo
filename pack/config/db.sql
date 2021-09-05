@@ -34,6 +34,7 @@ CREATE TABLE `tasks`
     `taskid`        text DEFAULT NULL,
     `userid`        text DEFAULT NULL,
     `name`          text DEFAULT NULL,
-    `status`         text DEFAULT NULL,
+    `date`          text DEFAULT NULL,
+    `status`        text DEFAULT NULL,
     PRIMARY KEY (`row`)
 );
