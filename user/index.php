@@ -84,7 +84,7 @@ include("core.php");
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">خروج</button>
-                    <button class="btn btn-sm btn-dark" trype="subbmit" name="addtask">اضافه کردن</button>
+                    <button class="btn btn-sm btn-dark" trype="submit" name="addtask">اضافه کردن</button>
                 </div>
             </div>
         </div>
