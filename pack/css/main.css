@@ -32,6 +32,16 @@
     direction: rtl;
     text-align: right;
 }
+.tblhd {
+    background-color: #f1f1f1;
+}
+.tblrow {
+    font-size: 13px;
+}
+.tblrow:hover {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
 .left {
     float: left;
 }
