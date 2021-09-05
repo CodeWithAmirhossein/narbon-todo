@@ -3,20 +3,7 @@
 session_start();
 
 include("../pack/config/config.php");
-
-if (!$_SESSION['status']) {
-        ?>
-        <script>
-                window.location.replace("../");
-        </script>
-        <?php
-}
-
-$id = $_SESSION['id'];
-
-$get_user = "SELECT * FROM `people` WHERE `id` = '$id'";
-$get_result = mysqli_query($connection, $get_user);
-$user = mysqli_fetch_assoc($get_result);
+include("core.php");
 
 ?>
 
@@ -97,7 +84,7 @@ $user = mysqli_fetch_assoc($get_result);
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">خروج</button>
-                    <button class="btn btn-sm btn-dark">اضافه کردن</button>
+                    <button class="btn btn-sm btn-dark" trype="subbmit" name="addtask">اضافه کردن</button>
                 </div>
             </div>
         </div>
