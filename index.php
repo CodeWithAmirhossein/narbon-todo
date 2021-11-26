@@ -57,13 +57,13 @@ if (isset($_GET['trash'])) {
 
 <body class="main">
         <p>
-                <span onclick="return changeTab('add');" class="text-primary"><i class="fa fa-plus"></i> Add</span>
+                <span onclick="return changeTab('add');" class="navitem text-primary"><i class="fa fa-plus"></i> Add</span>
                 &nbsp;
-                <span onclick="return changeTab('home');" class="text-dark"><i class="fa fa-home"></i> Home</span>
+                <span onclick="return changeTab('home');" class="navitem text-dark"><i class="fa fa-home"></i> Home</span>
                 &nbsp;
-                <span onclick="return changeTab('done');" class="text-success"><i class="fa fa-check"></i> Done</span>
+                <span onclick="return changeTab('done');" class="navitem text-success"><i class="fa fa-check"></i> Done</span>
                 &nbsp;
-                <span onclick="return changeTab('trash');" class="text-danger right"><i class="fa fa-trash"></i> Trash</span>
+                <span onclick="return changeTab('trash');" class="navitem text-danger right"><i class="fa fa-trash"></i> Trash</span>
         </p>
         <hr>
 
