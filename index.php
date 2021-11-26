@@ -50,12 +50,28 @@ if (isset($_POST['add'])) {
         <hr>
 
         <!-- Start Trash -->
-        <div id="home" style="display: none;">
+        <div id="home" style="display: block;">
                 <?php
                 $query = mysqli_query($connection, "SELECT * FROM tasks WHERE `status` = 'home'");
                 if (mysqli_num_rows($query) != 0) {
                         while ($task = mysqli_fetch_assoc($query)) {
-                                echo $task['name'];
+                ?>
+                                <div class="item border border-dark">
+                                        <span>
+                                                <span class="text-dark"><?php echo $task['name']; ?></span>
+                                                <span class="right">
+                                                        <span class="text-success">
+                                                                <a class="text-success" href="?done=<?php echo $task['id']; ?>"><i class="fa fa-check"></i></a>
+                                                        </span>
+                                                        &nbsp;
+                                                        <span class="text-danger">
+                                                                <a class="text-danger" href="?trash=<?php echo $task['id']; ?>"><i class="fa fa-trash"></i></a>
+                                                        </span>
+                                                </span>
+                                        </span>
+                                </div>
+                                <br>
+                <?php
                         }
                 } else {
                         echo "<p>Nothing added.</p>";
@@ -70,7 +86,23 @@ if (isset($_POST['add'])) {
                 $query = mysqli_query($connection, "SELECT * FROM tasks WHERE `status` = 'done'");
                 if (mysqli_num_rows($query) != 0) {
                         while ($task = mysqli_fetch_assoc($query)) {
-                                echo $task['name'];
+                ?>
+                                <div class="item border border-success">
+                                        <span>
+                                                <span class="text-success"><?php echo $task['name']; ?></span>
+                                                <span class="right">
+                                                        <span class="text-dark">
+                                                                <a class="text-dark" href="?home=<?php echo $task['id']; ?>"><i class="fa fa-home"></i></a>
+                                                        </span>
+                                                        &nbsp;
+                                                        <span class="text-danger">
+                                                                <a class="text-danger" href="?trash=<?php echo $task['id']; ?>"><i class="fa fa-trash"></i></a>
+                                                        </span>
+                                                </span>
+                                        </span>
+                                </div>
+                                <br>
+                <?php
                         }
                 } else {
                         echo "<p>Nothing added.</p>";
@@ -85,7 +117,23 @@ if (isset($_POST['add'])) {
                 $query = mysqli_query($connection, "SELECT * FROM tasks WHERE `status` = 'trash'");
                 if (mysqli_num_rows($query) != 0) {
                         while ($task = mysqli_fetch_assoc($query)) {
-                                echo $task['name'];
+                ?>
+                                <div class="item border border-danger">
+                                        <span>
+                                                <span class="text-danger"><?php echo $task['name']; ?></span>
+                                                <span class="right">
+                                                        <span class="text-success">
+                                                                <a class="text-success" href="?done=<?php echo $task['id']; ?>"><i class="fa fa-clock"></i></a>
+                                                        </span>
+                                                        &nbsp;
+                                                        <span class="text-danger">
+                                                                <a class="text-danger" href="?trash=<?php echo $task['id']; ?>"><i class="fa fa-trash"></i></a>
+                                                        </span>
+                                                </span>
+                                        </span>
+                                </div>
+                                <br>
+                <?php
                         }
                 } else {
                         echo "<p>Nothing added.</p>";
@@ -95,7 +143,7 @@ if (isset($_POST['add'])) {
         <!-- End Trash -->
 
         <!-- Start Add -->
-        <div id="add" style="display: block;">
+        <div id="add" style="display: none;">
                 <form action="index.php" method="post">
                         <input placeholder="Task name" name="task" class="form-control border border-primary text-primary">
                         <br>
