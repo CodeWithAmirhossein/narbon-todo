@@ -163,7 +163,7 @@ if (isset($_GET['trash'])) {
         <!-- Start Add -->
         <div id="add" style="display: none;">
                 <form action="index.php" method="post">
-                        <input placeholder="Task name" name="task" class="form-control border border-primary text-primary">
+                        <input placeholder="Task name" name="task" class="form-control border border-primary text-primary" required>
                         <br>
                         <button name="add" class="btn btn-primary" type="submit">Add</button>
                 </form>
