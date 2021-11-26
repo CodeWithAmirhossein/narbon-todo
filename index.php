@@ -92,7 +92,7 @@ if (isset($_GET['trash'])) {
                 <?php
                         }
                 } else {
-                        echo "<p>Nothing added.</p>";
+                        echo "<p class='text-dark'>Nothing added.</p>";
                 }
                 ?>
         </div>
@@ -123,7 +123,7 @@ if (isset($_GET['trash'])) {
                 <?php
                         }
                 } else {
-                        echo "<p>Nothing added.</p>";
+                        echo "<p class='text-success'>Nothing added.</p>";
                 }
                 ?>
         </div>
@@ -154,7 +154,7 @@ if (isset($_GET['trash'])) {
                 <?php
                         }
                 } else {
-                        echo "<p>Nothing added.</p>";
+                        echo "<p class='text-danger'>Nothing added.</p>";
                 }
                 ?>
         </div>
