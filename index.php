@@ -1,6 +1,11 @@
 <?php
 
-include('pack/config/config.php');
+define('server', 'localhost');
+define('user', 'amir');
+define('password', 'amir');
+define('database', 'donit');
+
+$connection = mysqli_connect(server, user, password, database);
 
 if (isset($_POST['add'])) {
         $task = $_POST['task'];
@@ -51,8 +56,60 @@ if (isset($_GET['trash'])) {
         <title>Donit</title>
         <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <link href="pack/css/style.css" rel="stylesheet" type="text/css">
-        <script src="pack/js/tabs.js"></script>
+        <style>
+                .main {
+                        padding: 5%;
+                        background-color: #f1f1f1;
+                }
+
+                .item {
+                        background-color: white;
+                        padding: 1%;
+                        border-radius: 5px;
+                }
+
+                .navigator {
+                        background-color: white;
+                        padding: 1%;
+                }
+
+                .right {
+                        float: right;
+                }
+
+                .navitem {
+                        cursor: pointer;
+                }
+        </style>
+        <script>
+                function changeTab(show) {
+                        if (show == 'home') {
+                                document.getElementById('home').style.display = 'block';
+                                document.getElementById('add').style.display = 'none';
+                                document.getElementById('done').style.display = 'none';
+                                document.getElementById('trash').style.display = 'none';
+                                return false;
+                        } else if (show == 'add') {
+                                document.getElementById('add').style.display = 'block';
+                                document.getElementById('home').style.display = 'none';
+                                document.getElementById('done').style.display = 'none';
+                                document.getElementById('trash').style.display = 'none';
+                                return false;
+                        } else if (show == 'trash') {
+                                document.getElementById('trash').style.display = 'block';
+                                document.getElementById('home').style.display = 'none';
+                                document.getElementById('done').style.display = 'none';
+                                document.getElementById('add').style.display = 'none';
+                                return false;
+                        } else if (show == 'done') {
+                                document.getElementById('done').style.display = 'block';
+                                document.getElementById('home').style.display = 'none';
+                                document.getElementById('add').style.display = 'none';
+                                document.getElementById('trash').style.display = 'none';
+                                return false;
+                        }
+                }
+        </script>
 </head>
 
 <body class="main">
@@ -172,3 +229,14 @@ if (isset($_GET['trash'])) {
 </body>
 
 </html>
+
+<!-- DROP TABLE IF EXISTS `tasks`;
+CREATE TABLE `tasks`
+(
+    `row`      int(11) NOT NULL AUTO_INCREMENT,
+    `name`    text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `id`     text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `status`    text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `date` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`row`)
+); -->
