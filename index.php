@@ -24,6 +24,24 @@ if (isset($_POST['add'])) {
         }
 }
 
+if (isset($_GET['home'])) {
+        $id = $_GET['home'];
+
+        mysqli_query($connection, "UPDATE tasks SET `status` = 'home' WHERE `id` = '$id'");
+}
+
+if (isset($_GET['done'])) {
+        $id = $_GET['done'];
+
+        mysqli_query($connection, "UPDATE tasks SET `status` = 'done' WHERE `id` = '$id'");
+}
+
+if (isset($_GET['trash'])) {
+        $id = $_GET['trash'];
+
+        mysqli_query($connection, "UPDATE tasks SET `status` = 'trash' WHERE `id` = '$id'");
+}
+
 ?>
 
 <!doctype html>
