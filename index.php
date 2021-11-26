@@ -2,6 +2,28 @@
 
 include('pack/config/config.php');
 
+if (isset($_POST['add'])) {
+        $task = $_POST['task'];
+        $date = date("F j, Y, g:i a");
+        $id = rand(111111111, 999999999);
+
+        if (mysqli_query($connection, "INSERT INTO tasks(`name`, `id`, `status`, `date`) VALUES ('$task', '$id', 'home', '$date')")) {
+?>
+                <script>
+                        window.alert('Added');
+                        window.location.replace('.');
+                </script>
+        <?php
+        } else {
+        ?>
+                <script>
+                        window.alert(<?php echo mysqli_error($connection); ?>);
+                        window.location.replace('.');
+                </script>
+<?php
+        }
+}
+
 ?>
 
 <!doctype html>
